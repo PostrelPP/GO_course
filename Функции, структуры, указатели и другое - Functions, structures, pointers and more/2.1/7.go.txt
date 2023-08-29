@@ -1,0 +1,14 @@
+func minimumFromFour() int {
+    var arr[4]int
+for i := 0; i < 4; i++ {
+		fmt.Scan(&arr[i])
+	}
+
+	m := arr[0]
+	for _, elem := range arr {
+		if elem < m {
+			m = elem
+		}
+	}
+	return m
+}

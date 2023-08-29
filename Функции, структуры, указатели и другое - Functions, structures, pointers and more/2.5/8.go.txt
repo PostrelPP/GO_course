@@ -1,0 +1,24 @@
+package main
+import (
+    "bufio"
+	"fmt"
+	"os"
+	"strings"
+)
+    
+func main(){
+    text, _ := bufio.NewReader(os.Stdin).ReadString('\n')
+	text = strings.Trim(text, "\n")
+	var rs = []rune(text)
+	var flag = true
+	for i := range rs {
+		if rs[i] != rs[len(rs)-i-1] {
+			flag = false
+		}
+	}
+	if flag == true {
+		fmt.Println("Палиндром")
+	} else {
+		fmt.Println("Нет")
+	}
+}

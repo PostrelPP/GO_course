@@ -1,0 +1,33 @@
+type MyStruct struct {
+	On bool
+	Ammo int
+	Power int
+}
+
+func (s *MyStruct) Shoot() bool {
+	if s.On == false {
+		return false
+	}
+	if s.Ammo>0 {
+		s.Ammo--
+		return true
+	} else {
+		return false
+	}
+
+}
+
+func (s *MyStruct) RideBike() bool {
+	if s.On == false {
+		return false
+	}
+	if s.Power>0 {
+		s.Power--
+		return true
+	} else {
+		return false
+	}
+}
+
+func main()  {
+	testStruct:=new(MyStruct)

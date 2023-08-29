@@ -1,0 +1,13 @@
+package main
+import "fmt"
+
+func main(){
+    var text string
+    fmt.Scan(&text)
+    var rs = []rune(text)
+    for i, elem := range rs{
+		if i%2 == 1 {
+			fmt.Print(string(elem))
+		}
+	}
+}

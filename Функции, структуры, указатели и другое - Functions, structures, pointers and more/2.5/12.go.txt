@@ -1,0 +1,23 @@
+package main
+import (
+    "fmt"
+    "regexp"
+)
+
+func main() {
+    var password string
+    fmt.Scanf("%s", &password)
+
+    if len(password) < 5 {
+        fmt.Println("Wrong password")
+        return
+    }
+
+    re := regexp.MustCompile(`^[a-zA-Z0-9]+$`)
+    if !re.MatchString(password) {
+        fmt.Println("Wrong password")
+        return
+    }
+
+    fmt.Println("Ok")
+}

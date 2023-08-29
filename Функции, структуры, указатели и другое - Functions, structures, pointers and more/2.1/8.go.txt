@@ -1,0 +1,9 @@
+func vote(x int, y int, z int) int {
+    var out int
+	if x+y+z > 1 {
+		out = 1
+	} else {
+		out = 0
+	}
+	return out
+}

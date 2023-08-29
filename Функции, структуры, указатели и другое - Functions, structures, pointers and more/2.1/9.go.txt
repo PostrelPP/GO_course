@@ -1,0 +1,12 @@
+func fibonacci(n int) int {
+    fib := []int{0, 1}
+	if n == 0 || n == 1 {
+		return fib[n]
+	}
+	for i := 2; ; i++ {
+		fib = append(fib, fib[i-2]+fib[i-1])
+		if n == i {
+			return fib[i]
+		}
+	}
+}
