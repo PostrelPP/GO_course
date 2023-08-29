@@ -1,0 +1,5 @@
+var a int = 10
+var a,b,c int
+var a int
+var a = 12
+a := 15

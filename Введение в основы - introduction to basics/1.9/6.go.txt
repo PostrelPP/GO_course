@@ -1,0 +1,21 @@
+package main
+import "fmt"
+
+func check(i int){
+    var z, x, c int
+    z = i / 100
+    x = i / 10 % 10
+    c = i % 10
+    if (z == x || x == c || c == z){
+        fmt.Println("NO")
+    } else{
+        fmt.Println("YES")
+    }
+    return
+}
+
+func main(){
+    var a int
+    fmt.Scan(&a)
+    check(a)
+}

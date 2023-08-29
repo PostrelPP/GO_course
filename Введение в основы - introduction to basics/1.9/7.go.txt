@@ -1,0 +1,20 @@
+package main
+import "fmt"
+
+func main(){
+    var a int 
+    fmt.Scan(&a)
+    var i int 
+    if (a > 0 && a < 10){
+        i = a
+    }else if (a > 9 && a < 100){
+        i = a / 10
+    } else if(a > 99 && a < 1000){
+        i = a / 100    
+    } else if(a > 999 && a < 10000){
+        i = a / 1000
+    } else {
+        i = a / 10000
+    } 
+    fmt.Println(i)
+}

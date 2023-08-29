@@ -1,0 +1,19 @@
+package main
+import "fmt"
+
+func main() {
+	var a, b, solve, count int
+	fmt.Scan(&a, &b)
+	for i := a; i <= b; i++ {
+		if i%7 == 0 {
+			solve = i
+			count++
+		}
+	}
+	if count > 0 {
+		fmt.Println(solve)
+	} else {
+		fmt.Println("NO")
+	}
+}
+

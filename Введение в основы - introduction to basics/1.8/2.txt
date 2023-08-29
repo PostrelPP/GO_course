@@ -1,0 +1,12 @@
+8 >= 8		true
+
+8 != 5		true
+	
+8 == 8		true
+
+5 < 4		false
+
+3 >= 5		false
+
+12 == 10	false
+

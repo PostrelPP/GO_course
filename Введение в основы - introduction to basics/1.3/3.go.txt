@@ -1,0 +1,19 @@
+package main
+import "fmt"
+
+func main() {
+    for i := 0; i < 3; i++ {
+        fmt.Println("I like Go!")
+    }
+}
+
+But you "don't know" yet how to make cycle for, so you can solve by this code:
+
+package main
+import "fmt"
+
+func main() {
+    fmt.Println("I like Go!")
+    fmt.Println("I like Go!")
+    fmt.Println("I like Go!")
+}

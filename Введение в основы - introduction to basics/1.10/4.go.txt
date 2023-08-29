@@ -1,0 +1,15 @@
+package main
+import "fmt"
+
+func main(){
+    var n, a int
+    var sum int
+    fmt.Scan(&n)
+    for i := 0; i < n; i ++{
+        fmt.Scan(&a)
+        if (a > 9 && a < 100 && a % 8 == 0){
+            sum = sum + a  
+        }                
+    }
+    fmt.Println(sum)
+}

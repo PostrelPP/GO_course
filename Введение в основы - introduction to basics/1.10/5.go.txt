@@ -1,0 +1,18 @@
+package main
+import "fmt"
+
+func main() {
+    var n, max, count int
+    fmt.Scan(&n) 
+    max = n
+    for n != 0 {
+        if n > max {
+            max = n 
+            count = 1
+        } else if n == max {
+            count++ 
+        }
+        fmt.Scan(&n)
+    }
+    fmt.Println(count)
+}

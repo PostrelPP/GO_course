@@ -1,0 +1,20 @@
+package main
+import "fmt"
+
+func main() {
+	var n int
+	var cow string
+	fmt.Scan(&n)
+
+	remind := n % 10
+	if n >= 11 && n <= 14 {
+		cow = "korov"
+	} else if remind == 1 {
+		cow = "korova"
+	} else if remind >= 2 && remind <= 4 {
+		cow = "korovy"
+	} else {
+		cow = "korov"
+	}
+	fmt.Print(n, " ", cow)
+}

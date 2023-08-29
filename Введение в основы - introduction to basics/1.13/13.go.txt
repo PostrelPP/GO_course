@@ -1,0 +1,17 @@
+package main
+import "fmt"
+import "math"
+
+func main() {
+	var num float64
+	fmt.Scan(&num)
+
+	sq := 0.0
+	for i := 0; sq <= num; i++ {
+		sq = math.Pow(2, float64(i))
+		if sq > num {
+			break
+		}
+		fmt.Print(sq, " ")
+	}
+}

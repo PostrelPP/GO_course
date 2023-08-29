@@ -1,0 +1,17 @@
+package main
+import "fmt"
+
+func main() {
+    var a, b int
+    fmt.Scan(&a)
+    slice := make([]int, 0, 0)
+    for i := 0; i < a; i++ {
+        fmt.Scan(&b)
+        slice = append(slice, b)
+    }
+    for idx, elem := range slice{
+        if idx%2 == 0 {
+            fmt.Print(elem, " ")
+        }
+    }
+}
