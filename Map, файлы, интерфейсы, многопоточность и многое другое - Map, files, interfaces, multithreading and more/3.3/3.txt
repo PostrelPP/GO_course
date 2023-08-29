@@ -1,0 +1,3 @@
+func(i int) int { return i+1 }			func(int) int
+func(i int) int { return i+1 } (5)		int
+

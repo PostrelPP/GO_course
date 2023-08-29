@@ -1,0 +1,30 @@
+func adding(a string, b string) int64 {
+	rs := []rune(a)
+	for _, value := range rs {
+		if unicode.IsDigit(value) {
+			continue //если цифра идем дальше
+		} else {
+			//иначе, заменяем на пустой
+			a = strings.ReplaceAll(a, string(value), "")
+		}
+	}
+	rs = []rune(b)
+	for _, value := range rs {
+		if unicode.IsDigit(value) {
+			continue //если цифра идем дальше
+		} else {
+			//иначе, заменяем на пустой
+			b = strings.ReplaceAll(b, string(value), "")
+		}
+	}
+	res1, err := strconv.ParseInt(a, 10, 64)
+	if err != nil {
+		panic(err)
+	}
+	res2, err := strconv.ParseInt(b, 10, 64)
+	if err != nil {
+		panic(err)
+	}
+
+	return res1 + res2
+}

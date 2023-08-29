@@ -1,0 +1,19 @@
+var a int
+slice := make([]int, 0, 0)
+m := make(map[int]int)
+for i := 0; i < 10; i++ {
+    fmt.Scan(&a)
+    slice = append(slice, a)
+}
+
+for i := range slice {
+    if _, ok := m[slice[i]]; ok {
+        continue
+    } else {
+        m[slice[i]] = work(slice[i])
+    }
+}
+
+for _, value:=range slice {
+    fmt.Print(m[value], " ")
+}

@@ -1,0 +1,15 @@
+res := []rune("stepik")							[115 116 101 112 105 107]
+res := string([]byte("stepik"))						stepik
+a := 10.123 ; res := int64(a)						10
+res := 101.0/10								10.1
+res := strconv.Itoa(int(float64(100/10)) + 1)				11
+res := strconv.FormatBool(10 == int16(float64(100/10)))			true
+res := (strconv.FormatBool(true)) == (10 == int(float64(100/10)))	ошибка
+res := strconv.FormatBool(10.1 == float32(float64(100/10.1)))		false
+
+
+
+
+
+
+
